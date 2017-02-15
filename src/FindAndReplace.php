@@ -37,26 +37,15 @@
 
 
 
-        function findWord($input_string, $input_search_word)
+        function findAndReplaceWord($input_string, $input_search_word, $replace_word)
         {
+
             $input_string_array = explode(" ", $input_string);
             if (empty($input_string_array)){
                 return "Please input sentence";
             }else{
-                if(in_array($input_search_word, $input_string_array)){
-                    return $input_search_word;
-                }
+                return str_replace($input_search_word, $replace_word,$input_string );
             }
-            // user enters sentence as string
-            // user enters word to match a word in string
         }
-
-        // function replaceWord()
-        // {
-        //     word replaces all matching words within string with a NEW word
-        // }
-
-
-
 
     }

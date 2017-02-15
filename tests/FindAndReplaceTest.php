@@ -4,17 +4,32 @@
 
     class FindAndReplaceTest extends PHPUnit_Framework_TestCase
     {
-        function testFindMatch()
+        // function testFindMatch()
+        // {
+        //     //Arrange
+        //    $test_FindAndReplace = new FindAndReplace;
+        //    $string = "Hello World";
+        //    $search_word = "World";
+        //
+        //    //Act
+        //    $result = $test_FindAndReplace->findAndReplaceWord($string, $search_word);
+        //
+        //    //Assert
+        //    $this->assertEquals("World", $result);
+        // }
+
+        function testReplaceWord()
         {
             //Arrange
            $test_FindAndReplace = new FindAndReplace;
-           $string = "Hello World";
+           $string = "Hello World, how are you?";
            $search_word = "World";
+           $replace_word = "Universe";
 
            //Act
-           $result = $test_FindAndReplace->findWord($string, $search_word);
+           $result = $test_FindAndReplace->findAndReplaceWord($string, $search_word, $replace_word);
 
            //Assert
-           $this->assertEquals("World", $result);
+           $this->assertEquals("Hello Universe, how are you?", $result);
         }
     }
