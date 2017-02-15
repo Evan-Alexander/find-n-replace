@@ -44,7 +44,7 @@
             if (empty($input_string_array)){
                 return "Please input sentence";
             }else{
-                return str_replace($input_search_word, $replace_word,$input_string );
+                return str_ireplace($input_search_word, $replace_word,$input_string );
             }
         }
 

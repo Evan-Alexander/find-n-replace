@@ -20,7 +20,9 @@
     });
 
     $app->post("/view_results", function() use ($app) {
-        
+        $create_sentence = new FindAndReplace;
+        $get_sentence = $create_sentence->findAndReplaceWord($_POST['sentence'], $_POST['search_word'], $_POST['replace_word']);
+        return $app['twig']->render('result.html.twig', array('result' => $get_sentence));
     });
 
     return $app;
