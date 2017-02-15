@@ -40,11 +40,13 @@
         function findAndReplaceWord($input_string, $input_search_word, $replace_word)
         {
 
+            var_dump($input_string);
             $input_string_array = explode(" ", $input_string);
+            var_dump($input_string_array);
             if (empty($input_string_array)){
                 return "Please input sentence";
             }else{
-                return str_ireplace($input_search_word, $replace_word,$input_string );
+                return preg_replace('/'. $input_search_word . '/i', $replace_word, $input_string);
             }
         }
 
